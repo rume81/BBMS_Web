@@ -1,0 +1,15 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+ 
+ 	<bean id="bidDataListExcel" class="com.ey.bbms.utils.BidDataExcelView">
+	</bean>
+	
+	<bean id="borrowingDataListExcel" class="com.ey.bbms.utils.BorrowingExcelView">
+	</bean>
+	
+	<bean id="successfulBidDataListExcel" class="com.ey.bbms.utils.SuccessfulBidDataExcelView">
+	</bean>
+
+</beans>

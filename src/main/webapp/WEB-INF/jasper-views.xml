@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+  http://www.springframework.org/schema/beans 
+  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+  http://www.springframework.org/schema/util 
+  http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+ 
+     <!--here all the url value should contains the valid path for the jrxml file-->
+     
+    <bean id="pdfReportFinancialinstitute"
+          class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
+          p:url="classpath:rpt/Financialinstitute.jrxml"
+          p:reportDataKey="datasource" />
+    
+    <bean id="pdfReportThereSpecification"
+          class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
+          p:url="classpath:rpt/ThereSpecification.jrxml"
+          p:reportDataKey="datasource" />
+    
+    <bean id="pdfReportNoSpecification"
+          class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
+          p:url="classpath:rpt/NoSpecification.jrxml"
+          p:reportDataKey="datasource" />
+ 
+ 	<bean id="pdfReportInterestRateBy"
+          class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
+          p:url="classpath:rpt/InterestRateBy.jrxml"
+          p:reportDataKey="datasource" />
+          
+    <bean id="pdfReportSuccessfulBidStatusTableByBank"
+          class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
+          p:url="classpath:rpt/FinancialInstitutionBy.jrxml"
+          p:reportDataKey="datasource" />
+    
+    <bean id="pdfReportSuccessfulBidDocument"
+		class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
+		p:url="classpath:rpt/SuccessfulBidDocument.jrxml"
+		p:reportDataKey="datasource"
+		p:subReportUrls-ref="successfulBidDocumentSubReportUrls"
+		p:subReportDataKeys-ref="successfulBidDocumentSubReportDatasource"/>
+		
+	<util:map id="successfulBidDocumentSubReportUrls">
+		<!-- This entry key must be declared exactly as you declared it in the master JRXML file -->
+		<entry key="SUBREPORT_DIR" value="classpath:rpt/SuccessfulBidDocument_subreport.jrxml"/>
+	</util:map>
+ 
+	<util:list id="successfulBidDocumentSubReportDatasource">
+		<value>JasperCustomSubReportDatasource</value>
+	</util:list>
+	
+	<bean id="pdfReportProvisionalNotice"
+		class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
+		p:url="classpath:rpt/ProvisionalNotice.jrxml"
+		p:reportDataKey="datasource"
+		p:subReportUrls-ref="provisionalNoticeSubReportUrls"
+		p:subReportDataKeys-ref="provisionalNoticeReportDatasource"/>
+		
+	<util:map id="provisionalNoticeSubReportUrls">
+		<!-- This entry key must be declared exactly as you declared it in the master JRXML file -->
+		<entry key="SUBREPORT_DIR" value="classpath:rpt/SuccessfulBidDocument_subreport.jrxml"/>
+	</util:map>
+ 
+	<util:list id="provisionalNoticeReportDatasource">
+		<value>JasperCustomSubReportDatasource</value>
+	</util:list>
+    
+    <bean id="pdfReportCreditApplicationPrint"
+          class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
+          p:url="classpath:rpt/CreditApplicationPrint.jrxml"
+          p:reportDataKey="datasource" />
+          
+          
+    <bean id="pdfReportBillCreditApplicationIntermediateInterestPayments"
+          class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
+          p:url="classpath:rpt/BillCreditApplicationIntermediateInterestPayments.jrxml"
+          p:reportDataKey="datasource" />
+    
+    <bean id="pdfReportBillApplicationFormList3"
+          class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
+          p:url="classpath:rpt/BillApplicationFormList3.jrxml"
+          p:reportDataKey="datasource" />      
+          
+    <bean id="pdfReportBillApplicationFormList2"
+          class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
+          p:url="classpath:rpt/BillApplicationFormList2.jrxml"
+          p:reportDataKey="datasource" />
+                    
+    <bean id="pdfReportBillApplicationFormList"
+          class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
+          p:url="classpath:rpt/BillApplicationFormList.jrxml"
+          p:reportDataKey="datasource" />
+          
+    <bean id="pdfReportCreditorManagementBook3"
+          class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
+          p:url="classpath:rpt/CreditorManagementBook3.jrxml"
+          p:reportDataKey="datasource" />
+          
+    <bean id="pdfReportCreditorManagementBook"
+          class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
+          p:url="classpath:rpt/CreditorManagementBook.jrxml"
+          p:reportDataKey="datasource" />
+          
+    <bean id="pdfReportCreditorManagementBook2"
+          class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
+          p:url="classpath:rpt/CreditorManagementBook2.jrxml"
+          p:reportDataKey="datasource" />
+    
+    <bean id="pdfReportApprovalApplicationFormAttachment"
+          class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
+          p:url="classpath:rpt/ApprovalApplicationFormAttachment.jrxml"
+          p:reportDataKey="datasource" />
+    
+    <bean id="pdfReportApprovalApplicationFormAttachment2"
+          class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
+          p:url="classpath:rpt/ApprovalApplicationFormAttachment2.jrxml"
+          p:reportDataKey="datasource" />    
+          
+    <bean id="pdfReportApprovalApplicationFormAttachment3"
+          class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
+          p:url="classpath:rpt/ApprovalApplicationFormAttachment3.jrxml"
+          p:reportDataKey="datasource" />          
+          
+    <bean id="pdfReportTransferSlip"
+		class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
+		p:url="classpath:rpt/TransferSlip.jrxml"
+		p:reportDataKey="datasource"
+		p:subReportUrls-ref="transferSlipSubReportUrls"
+		p:subReportDataKeys-ref="transferSlipSubReportDatasource"/>
+		
+	<util:map id="transferSlipSubReportUrls">
+		<!-- This entry key must be declared exactly as you declared it in the master JRXML file -->
+		<entry key="SUBREPORT_DIR" value="classpath:rpt/TransferSlip_journal.jrxml"/>
+	</util:map>
+ 
+	<util:list id="transferSlipSubReportDatasource">
+		<value>JasperCustomSubReportDatasource</value>
+	</util:list>
+	
+	<bean id="pdfReportLoanAgreementDeed"
+          class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
+          p:url="classpath:rpt/LoanAgreementDeed.jrxml"
+          p:reportDataKey="datasource" />   
+	    
+    <!--<bean id="xlsReport"
+          class="org.springframework.web.servlet.view.jasperreports.JasperReportsXlsView"
+          p:url="classpath:test.jrxml"
+          p:reportDataKey="datasource" />
+ 
+ 
+    <bean id="csvReport"
+          class="org.springframework.web.servlet.view.jasperreports.JasperReportsCsvView"
+          p:url="classpath:test.jrxml"
+          p:reportDataKey="datasource"/>
+ 
+ 	<bean id="financialinstituteHtml"
+          class="org.springframework.web.servlet.view.jasperreports.JasperReportsHtmlView"
+          p:url="classpath:rpt/Financialinstitute.jrxml"
+          p:reportDataKey="datasource" />-->
+</beans>

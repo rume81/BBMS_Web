@@ -1,0 +1,6 @@
+.col-md-4 .datetitle { 
+	float:right;
+	height: 30px;
+    width: 100px;
+	border: 1px solid gray; 
+}

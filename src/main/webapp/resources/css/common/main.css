@@ -1,0 +1,95 @@
+* {
+    
+}
+.no_padding {
+    padding: 0;
+}
+.white_border {
+    border: 1px solid #ffffff;
+    min-height: 34px;
+}
+.padding_top {
+    padding-top: 5px;
+}
+.main_nav {
+    background-color: #EEEEEE;
+    margin-bottom: 0;
+}
+.main_nav .navbar-nav {
+	float: none;
+}
+.main_nav ul li {
+    padding: 10px;
+}
+.main_nav ul li a {
+    padding: 5px;
+    border: 2px solid #ffffff;
+}
+.body {
+    background-color: #9CD6E6;
+    margin-top: 40px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    border-radius: 25px;
+}
+.body button {
+    width: 90%;
+    margin-bottom: 25px;
+}
+#fitable button {
+	width: auto;
+    margin-bottom: 0;
+}
+/*.footer {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+}*/
+.main_footer {
+    background-color: #EEEEEE;
+    height: 30px;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}
+.border {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid #ffffff;
+}
+.bid_interest {
+    margin-right: 32px;
+    max-width: 228px;
+}
+.no_padding_left {
+    padding-left: 0;
+}
+.no_padding_right {
+    padding-right: 0;
+}
+.percentise {
+    padding-top: 7px;
+}
+.data_button {
+    margin-bottom: 0px !important;
+}
+.interest_rate_close {
+    margin-top: 50px;
+}
+.stop_rate {
+    margin-top: 5px;
+    margin-bottom: 80px;
+}
+.stop_rate1 {
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+.empty_column {
+    margin-bottom: 39px;
+}
+.btn_min_height {
+    min-height: 72px;
+}
+textarea {
+    margin-bottom: 10px;
+}

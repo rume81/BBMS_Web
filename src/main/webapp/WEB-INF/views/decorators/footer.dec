@@ -1,0 +1,10 @@
+	</section>
+        <section class="container">
+            <footer class="footer">
+                <div class="container main_footer">
+                    <p class="text-muted">&copy; ey 2017</p>
+                </div>
+            </footer>
+        </section>
+    </body>
+</html>

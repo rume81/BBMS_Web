@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/WEB-INF/views/decorators">
+    <excludes>
+    	<pattern>*.html</pattern>
+    	<pattern>/login</pattern>
+    	<pattern>/users/valideduser</pattern>
+    	<pattern>/financialinstitutedetails</pattern>
+    	<pattern>/biddataderegister</pattern>
+    	<pattern>/biddataregister</pattern>
+    	<pattern>/setbiddateinsession</pattern>
+    	<pattern>/interestrateorderbidstatus</pattern>
+    	<pattern>/SuccessfulBidDataCreation</pattern>
+    	<pattern>/editbiddata</pattern>
+		<pattern>/editfinancialinstitution</pattern>
+		<pattern>/insertfinancialinstitution</pattern>
+		<pattern>/savefinancialmaster</pattern>
+		<pattern>/insertcertificatewording</pattern>
+		<pattern>/updatevariousparameters</pattern>
+		<pattern>/updatecertificatewording</pattern>
+		<pattern>/updateofficialnameconversion</pattern>
+		<pattern>/saveofficialnameconversion</pattern>
+		<pattern>/updateFinancialInstitutionMasterTemp</pattern>
+		<pattern>/updatefieldname</pattern>
+		<pattern>/updateFinancialInstitutionMasterTemp</pattern>
+		<pattern>/saveSystemMaintenance</pattern>
+    	<pattern>/BidDocumentPrintDetails</pattern>
+    	<pattern>/NotesApplicationFormPrint</pattern>
+    	<pattern>/TransferSlipProcess</pattern>
+    	<pattern>/userregister</pattern>
+    	<pattern>/checkusername</pattern>
+    	<pattern>/setbormatdateinsession</pattern>
+    	<pattern>/getuserinfo</pattern>
+    	<pattern>/userupdate</pattern>
+    	<pattern>/cleartables</pattern>
+    </excludes>
+
+    <decorator name="main" page="/main.dec">
+          <pattern>/*</pattern>
+    </decorator>
+</decorators>
